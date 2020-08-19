@@ -16,6 +16,8 @@ int main() {
 
   cout << endl;
 
+  // auto it = dq.rbegin();
+  // while(it != dq.rend()) {   it is reverse_iterator, dq can not erase
   auto it = dq.begin();
   while(it != dq.end()) {
     cout << "see " << *it << endl;
