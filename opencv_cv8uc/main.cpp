@@ -34,5 +34,16 @@ int main( int argc, char** argv )
       cout << (int)(*(p + i)) << ' ';
     }
     cout << endl;
+
+    Mat resized;
+    resize(mat15, resized, cv::Size(224, 224));
+    cout << resized.rows << ' ' << resized.cols << ' ' << resized.channels() << endl;
+
+    p = resized.data;
+    for(int i = 0; i < 15; i++) {
+      cout << (int)(*(p + i)) << ' ';
+    }
+    cout << endl;
+
     return 0;
 }
