@@ -4,6 +4,8 @@
 #include "opencv2/highgui.hpp"
 
 #include <iostream>
+#include <vector>
+#include <list>
 #include <ctype.h>
 
 using namespace cv;
@@ -44,6 +46,21 @@ int main( int argc, char** argv )
       cout << (int)(*(p + i)) << ' ';
     }
     cout << endl;
+
+    /*
+    list<Mat> lmats;
+    for(int i = 0; i < 5; i++) {
+      Mat mat(1024, 768, CV_8UC3, cv::Scalar(i, i, i));
+
+      for(int j = 0; j < mat.channels(); j++) {
+        cout << (int)mat.at<Vec3b>(0, 0)[j] << "|";
+      }
+      lmats.push_back(mat);
+    }
+    cout << endl;
+
+    merge(lmats, mat15);
+    */
 
     return 0;
 }
